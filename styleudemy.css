@@ -15,6 +15,10 @@ body {
     gap: 10px;
     align-items: center;
     flex-direction: row;
+    position:sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 .navbar__s1 {
@@ -61,7 +65,24 @@ body {
 .navbar__s3 p:hover {
     color: #A435F0;
 }
-
+.mylearning{
+    position: relative;
+    cursor: pointer;
+}
+.mylearning__popup{
+    position: absolute;
+    border: solid grey 2px;
+    background-color: #ffffff;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    right: 0;
+    top: 50px;
+    display: none;
+}
+.mylearning:hover .mylearning__popup{
+    display: block;
+}
 .categories {
     border-bottom: whitesmoke solid 1px;
     display: flex;
