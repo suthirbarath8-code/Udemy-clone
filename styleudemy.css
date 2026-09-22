@@ -93,14 +93,17 @@ body {
 .categories p {
     background-color: #A435F0;
     color: white;
-    border: solid 1px;
+    border: #A435F0 solid 1px;
     padding: 9px;
+    cursor: pointer;
     border-radius: 25px;
 }
 
 .categories p:hover {
     background-color: white;
-    color: #A435F0;
+    color:black;
+    border: #A435F0 solid 1px;
+    transition: 1s;
 }
 
 .image {
@@ -137,9 +140,23 @@ body {
     padding: 20px 25px;
     border-radius: 6px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation-name:zoom;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.box h2 {
+.box h1 {
     font-size: clamp(18px, 2.4vw, 30px);
     font-weight: 800;
     color: #1c2340;
