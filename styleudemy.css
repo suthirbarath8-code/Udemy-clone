@@ -131,15 +131,16 @@ body {
 }
 
 .box {
-    margin-top: 80px;
-    margin-left: 80px;
+    width: 25%;
+    border: solid black 1px;
+    background-color: white;
     position: absolute;
-    top: 30px;
-    left: 30px;
-    background: #ffffff;
-    padding: 20px 25px;
-    border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    top: 30%;
+    left: 10%;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
     opacity: 0;
     animation-name:zoom;
     animation-duration: 1.5s;
@@ -155,38 +156,22 @@ body {
         opacity: 1;
     }
 }
-
-.box h1 {
-    font-size: clamp(18px, 2.4vw, 30px);
-    font-weight: 800;
-    color: #1c2340;
-    margin-bottom: 12px;
-    line-height: 1.25;
-    padding-bottom: 10px;
-
-}
-
 .recommended {
     padding: 10px;
 }
-.recommended p{
-    padding-bottom: 10px;
-}
+
 .recommended__container {
     display: flex;
     justify-content: space-between;
 }
 
-.recommended__image {
-    width: 20%;
-    border: #E9EAF2 solid 1px;
-    border-bottom: 10px;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 2px;
+.recommended--image {
+   flex-grow: 1;
+   flex-basis: 20%;
+   margin:5px;
 }
 
-.recommended__image img {
+.recommended--image img {
     width: 100%;
     height: 50%;
 }
@@ -244,3 +229,29 @@ body {
     align-items: center;
     
 }
+@media screen and (max-width: 900px) {
+    body{
+        font-size: 11px;
+        
+    }
+    
+}
+@media screen and (max-width: 700px) {
+    .recommended--image{
+        flex-basis: 40px;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    body{
+        font-size: 10px;
+    }
+    .categories{
+        display: none;
+    }
+    .navbar__s2 , .navbar__s3{
+        display: none;
+    }
+    
+}
+
